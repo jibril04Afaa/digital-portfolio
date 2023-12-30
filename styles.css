@@ -262,8 +262,6 @@ single scroll display for smaller screens
     
         /* adjust gap as per screen size */
         
-        font-size: 0.8rem;
-        line-height: 1rem;
         padding: 1rem;
 
     }
@@ -272,6 +270,11 @@ single scroll display for smaller screens
         /* adjust image as per screen width*/
         width: 150px;
         height: 200px;
+    }
+
+    .hs p {
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
     
     /* College */
@@ -293,6 +296,10 @@ single scroll display for smaller screens
         height: 200px;
     }
     
+    .college p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
   
 }
 
@@ -661,67 +668,67 @@ single scroll display for smaller screens
         gap: 1rem;
     }
 
-        /* Education */
-        .education-flex {
-            display: flex;
-        }
-    
-        /* High school */
-        .education-nav {
-            justify-content: space-between;
-            padding: 0.2rem;
-            
-        }
-    
-        .resume-btn {
-            font-size: 2rem;
-        }
-    
-        .hs {
-            /* adjust display as per screen size */
-            display: flex;
-            gap: 2rem;
-        
-            /* adjust gap as per screen size */
-            padding: 1rem;
-    
-        }
-
-        .hs p {
-            font-size: 2rem;
-            line-height: 2rem;
-        }
-    
-        .hs img {
-            /* adjust image as per screen width*/
-            width: 200px;
-            height: 250px;
-        }
-        
-        /* College */
-        .college {
-            /* adjust display as per screen size */
-            display: flex;
-            gap: 2rem;
-        
-            /* adjust gap as per screen size */
-            
-            padding: 1rem;
-    
-        }
-
-        .college p {
-            font-size: 2rem;
-            line-height: 2rem;
-        }
-
-        .college img {
-            /* adjust image as per screen width*/
-            width: 250px;
-            height: 300px;
-        }
-    
+    /* Education */
+    .education-flex {
+        display: flex;
     }
+
+    /* High school */
+    .education-nav {
+        justify-content: space-between;
+        padding: 0.2rem;
+        
+    }
+
+    .resume-btn {
+        font-size: 2rem;
+    }
+
+    .hs {
+        /* adjust display as per screen size */
+        display: flex;
+        gap: 2rem;
+    
+        /* adjust gap as per screen size */
+        padding: 1rem;
+
+    }
+
+    /* .hs p {
+        font-size: 2rem;
+        line-height: 2rem;
+    } */
+
+    .hs img {
+        /* adjust image as per screen width*/
+        width: 200px;
+        height: 250px;
+    }
+    
+    /* College */
+    .college {
+        /* adjust display as per screen size */
+        display: flex;
+        gap: 2rem;
+    
+        /* adjust gap as per screen size */
+        
+        padding: 1rem;
+
+    }
+
+    .college p, .hs p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .college img {
+        /* adjust image as per screen width*/
+        width: 250px;
+        height: 300px;
+    }
+
+}
 
 
 
@@ -798,5 +805,7 @@ single scroll display for smaller screens
         justify-content: space-between; */
         gap: 1rem;
     }
+
+    
 
 }
