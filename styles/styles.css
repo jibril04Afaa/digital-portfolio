@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@400;500&family=Poppins:wght@100&family=Quattrocento+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "PT Serif", serif;
+  font-family: "Quattrocento Sans", sans-serif;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.nav__container ul {
+  display: flex;
+  list-style: none;
+}
+.nav__container ul li:hover {
+  text-decoration: underline;
+  transition: all 0.4s ease-in-out;
+}
+
+.hero {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+}
+.hero img {
+  width: 220px;
+  height: 300px;
+  border-radius: 25%;
+}
+.hero .hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero .hero__text p, .hero .hero__text h2, .hero .hero__text h3 {
+  display: flex;
+  justify-content: center;
+}
+.hero .hero__text p {
+  font-size: 1.2rem;
+}
+.hero .hero__text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero .hero__text p, .hero .hero__text h3 {
+  color: rgba(0, 0, 0, 0.607);
+  font-weight: bold;
+}
+.hero .hero__text .hero__btns {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.hero .hero__text .hero__btns button {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.755);
+  color: ghostwhite;
+  border: 0;
+}
+.hero .hero__text .hero__btns button:hover {
+  opacity: 0.7;
+}
+.hero .hero__text .hero__links {
+  display: flex;
+  justify-content: space-around;
+}
+.hero .hero__text .hero__links i {
+  font-size: 2rem;
+}
+
+@media (width <= 320px) {
+  /*
+  Hamburger menu for mobile
+  */
+  .nav__container {
+    display: none;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .hero .hero__img {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero__img img {
+    border-radius: 25%;
+  }
+  .hero .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero .hero__text p, .hero .hero__text h2, .hero .hero__text h3 {
+    display: flex;
+    font-size: 1rem;
+  }
+  .hero .hero__text p {
+    font-size: 1.2rem;
+  }
+  .hero .hero__text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .hero .hero__text p, .hero .hero__text h3 {
+    color: rgba(0, 0, 0, 0.607);
+    font-weight: bold;
+  }
+  .hero .hero__text .hero__btns button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+  }
+  .hero .hero__text .hero__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero .hero__text .hero__links i {
+    font-size: 2rem;
+  }
+  .about {
+    display: flex;
+  }
+  .about .about-container {
+    padding-top: 3rem;
+  }
+  .about .about-container .heading {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+  }
+  .about .about-container .education-xp-container .image {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .about .about-container .education-xp-container .image img {
+    border-radius: 25px;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .education {
+    border: 2px solid rgba(3, 3, 3, 0.722);
+    padding: 1.2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .education h4 {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .education span {
+    text-align: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .experience {
+    border: 2px solid rgba(3, 3, 3, 0.722);
+    padding: 1.2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .experience h4 {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .experience span {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .text {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .about .about-container .education-xp-container .items .writing-btn {
+    text-align: center;
+    padding: 1rem;
+  }
+  .about .about-container .education-xp-container .items .writing-btn button {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+  }
+  .about .about-container .education-xp-container .items .writing-btn button:hover {
+    opacity: 0.7;
+  }
+}
+@media (width <= 375px) {
+  .nav__container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+  }
+  .nav__container ul {
+    gap: 0.5rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 1rem;
+  }
+  .hero .hero__img {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero__img img {
+    width: 120px;
+    height: 150px;
+    border-radius: 25%;
+  }
+  .hero .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero .hero__text p, .hero .hero__text h2, .hero .hero__text h3 {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero__text p {
+    font-size: 1.2rem;
+  }
+  .hero .hero__text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .hero .hero__text p, .hero .hero__text h3 {
+    color: rgba(0, 0, 0, 0.607);
+    font-weight: bold;
+  }
+  .hero .hero__text .hero__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .hero .hero__text .hero__btns button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+  }
+  .hero .hero__text .hero__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero .hero__text .hero__links i {
+    font-size: 2rem;
+  }
+}
+@media (width <= 425px) {
+  .nav__container {
+    font-size: 1.5rem;
+  }
+  .nav__container ul {
+    gap: 0.5rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 1rem;
+  }
+  .hero .hero__img {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero__img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25%;
+  }
+  .hero .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero .hero__text p, .hero .hero__text h2, .hero .hero__text h3 {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero__text p {
+    font-size: 1.2rem;
+  }
+  .hero .hero__text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .hero .hero__text p, .hero .hero__text h3 {
+    color: rgba(0, 0, 0, 0.607);
+    font-weight: bold;
+  }
+  .hero .hero__text .hero__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .hero .hero__text .hero__btns button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+  }
+  .hero .hero__text .hero__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero .hero__text .hero__links i {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
