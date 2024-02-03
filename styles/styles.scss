@@ -17,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 
 button {
@@ -39,6 +39,12 @@ $specialColor: rgba(3, 3, 3, 0.722);
     &:hover {
         opacity: .7;
     }
+}
+
+@mixin divCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // default values
@@ -72,27 +78,32 @@ $specialColor: rgba(3, 3, 3, 0.722);
 // Home Page
 .hero {
     margin-top: 4rem;
-    // border: 2px solid blue;
+    border: 2px solid blue;
+    max-width: 100%;
+    min-width: 100%;
+    margin-inline: auto;
     display: flex;
     justify-content: space-around;
     gap: 3rem;
 
-
-    img {
-        width: 220px;
-        height: 300px;
-        border-radius: 25%;
+    .hero__img {
+        img {
+            width: 220px;
+            height: 300px;
+            border-radius: 25%;
+            max-width: 100%;
+        }
     }
+
 
     .hero__text {
         // border: 2px solid red;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
-        p, h2, h3 {
-            // border: 2px solid palegoldenrod;
-            display: flex;
-            justify-content: center;
+        p, h2 {
+
         }
 
         p {
@@ -102,11 +113,6 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
         h2 {
             font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        p, h3 {
-            color: rgba(0, 0, 0, 0.607);
             font-weight: bold;
         }
 
@@ -137,10 +143,93 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
 
 // About container
-.about-container{
-    // border: 2px solid black;
+/*
+    max-width: 100%;
+    min-width: 100%;
+    margin-inline: auto;
+*/
+.about {
+    .about-container {
+        .heading {
+            h2 {
+            }
+        }
 
+        .education-xp-container {
+            .image {
+                
+                img {
+                    border-radius: 25px;
+                }
+            }
+
+            .items {
+                
+                .item-wrapper {
+                    //display: flex;
+                    //flex-direction: column;
+                    //gap: 1rem;
+                    .education {
+                        //border:2px solid $specialColor;
+                        //padding: 1.2rem;
+                        //border-radius: 25px;
+                        //display: flex;
+                        //flex-flow: wrap;
+                        //flex-direction: column;
+                        h4 {
+                            //display: flex;
+                            //justify-content: center;
+                        }
+
+                        span {
+                            //text-align: center;
+                        }
+
+                        h5 {
+
+                        }
+                    }
+                    .experience {
+                        //border: 2px solid $specialColor;
+                        //padding: 1.2rem;
+                        
+                        // border-radius: 25px;
+                        // display: flex;
+                        // flex-flow: wrap;
+                        // flex-direction: column;
+                        h4 {
+                            // display: flex;
+                            // justify-content: center;
+                        }
+
+                        span {
+                            // display: flex;
+                            // justify-content: center;
+                        }
+
+                        h5 {
+                            
+                        }
+                    }
+                }
+                .text {
+                    text-align: center;
+                }
+
+                .writing-btn {
+                    text-align: center;
+                    // padding: 1rem;
+                    button {
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 
 
@@ -155,7 +244,7 @@ $specialColor: rgba(3, 3, 3, 0.722);
 // Media Queries
 
 // small and medium
-@media (width <= 320px) {
+@media (width <= 375px) {
     // Navbar (small and medium)
     /*
     Hamburger menu for mobile
@@ -188,11 +277,8 @@ $specialColor: rgba(3, 3, 3, 0.722);
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            p, h2, h3 {
-                // border: 2px solid palegoldenrod;
-                display: flex;
-                //justify-content: center;
-                font-size: 1rem;
+            h3 {
+                font-size: 0.8rem;
             }
     
             p {
@@ -201,7 +287,7 @@ $specialColor: rgba(3, 3, 3, 0.722);
             }
     
             h2 {
-                font-size: 2.5rem;
+                font-size: 1.5rem;
                 font-weight: bold;
             }
     
@@ -212,9 +298,9 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
             .hero__btns {
                 // border: 2px solid green;
-                
+                @include divCentered();
                 button {
-                    font-size: 1.5rem;
+                    font-size: 0.8rem;
                     padding: 1rem;
                     border-radius: 25px;
                     background-color: rgba(0, 0, 0, 0.755);
@@ -333,9 +419,6 @@ $specialColor: rgba(3, 3, 3, 0.722);
                             background-color: rgba(0, 0, 0, 0.755);
                             color: ghostwhite;
                             border: 0;
-                            &:hover {
-                                opacity: .7;
-                            }
                         }
                     }
                 }
