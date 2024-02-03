@@ -225,6 +225,34 @@ button {
   .about .about-container .education-xp-container .items .writing-btn button:hover {
     opacity: 0.7;
   }
+  .xp .xp-title {
+    text-align: center;
+    padding: 1rem;
+  }
+  .xp .xp-title h4, .xp .xp-title h3 {
+    color: rgba(3, 3, 3, 0.722);
+  }
+  .xp .xp-container {
+    text-align: center;
+    border: 2px solid rgba(3, 3, 3, 0.722);
+    border-radius: 25px;
+  }
+  .xp .xp-container .xp-type {
+    padding: 1rem;
+    font-weight: bold;
+  }
+  .xp .xp-container .xp-skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .xp .xp-container .xp-skills-container .skill-container h3 {
+    font-weight: bold;
+    color: rgba(3, 3, 3, 0.722);
+  }
+  .xp .xp-container .xp-skills-container .skill-container h4 {
+    font-style: italic;
+  }
 }
 @media (width <= 375px) {
   .nav__container {
