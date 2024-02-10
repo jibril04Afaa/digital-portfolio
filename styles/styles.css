@@ -22,12 +22,15 @@ button {
 .nav__container {
   display: flex;
   justify-content: space-around;
-  font-size: 2rem;
   margin-top: 2rem;
 }
 .nav__container ul {
   display: flex;
   list-style: none;
+}
+.nav__container ul li {
+  display: flex;
+  justify-content: space-around;
 }
 .nav__container ul li:hover {
   text-decoration: underline;
@@ -93,17 +96,7 @@ button {
   opacity: 0.7;
 }
 
-.xp .xp-title h4, .xp .xp-title h2 {
-  text-align: center;
-}
-.xp .experience-container {
-  text-align: center;
-}
-.xp .experience-container .frontend-dev, .xp .experience-container .backend-dev {
-  border: 2px solid black;
-  border-radius: 25px;
-}
-@media (width <= 425px) {
+@media (width >= 320px) {
   .nav__container {
     display: none;
   }
@@ -127,10 +120,10 @@ button {
     gap: 1rem;
   }
   .hero .hero__text h3 {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
   .hero .hero__text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .hero .hero__text h2 {
     font-size: 1.5rem;
@@ -147,7 +140,7 @@ button {
     flex-wrap: wrap;
   }
   .hero .hero__text .hero__btns button {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     padding: 1rem;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.755);
@@ -168,6 +161,9 @@ button {
   .about .about-container .heading {
     display: flex;
     justify-content: center;
+  }
+  .about .about-container .heading h2 {
+    font-size: 2rem;
   }
   .about .about-container .education-xp-container {
     padding: 1rem;
@@ -199,9 +195,11 @@ button {
   .about .about-container .education-xp-container .items .item-wrapper .education h4 {
     display: flex;
     justify-content: center;
+    font-size: 1.6rem;
   }
   .about .about-container .education-xp-container .items .item-wrapper .education span {
     text-align: center;
+    font-size: 1.6rem;
   }
   .about .about-container .education-xp-container .items .item-wrapper .experience {
     border: 2px solid rgba(3, 3, 3, 0.722);
@@ -211,46 +209,27 @@ button {
     flex-flow: wrap;
     flex-direction: column;
   }
-  .about .about-container .education-xp-container .items .item-wrapper .experience h4 {
+  .about .about-container .education-xp-container .items .item-wrapper .experience h4, .about .about-container .education-xp-container .items .item-wrapper .experience span {
     display: flex;
     justify-content: center;
-  }
-  .about .about-container .education-xp-container .items .item-wrapper .experience span {
-    display: flex;
-    justify-content: center;
+    font-size: 1.6rem;
   }
   .about .about-container .education-xp-container .items .text {
     text-align: center;
     padding-top: 1rem;
+    font-size: 1.6rem;
   }
   .about .about-container .education-xp-container .items .writing-btn {
     text-align: center;
     padding: 1rem;
   }
   .about .about-container .education-xp-container .items .writing-btn button {
-    font-size: 1rem;
+    font-size: 1.6rem;
     padding: 1rem;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.755);
     color: ghostwhite;
     border: 0;
-  }
-  .xp .xp-title h4, .xp .xp-title h2 {
-    text-align: center;
-  }
-  .xp .experience-container {
-    text-align: center;
-  }
-  .xp .experience-container .frontend-dev, .xp .experience-container .backend-dev {
-    border: 2px solid black;
-    border-radius: 25px;
-  }
-  .xp .experience-container .frontend-dev .skill-container, .xp .experience-container .backend-dev .skill-container {
-    padding: 0.7rem;
-  }
-  .xp .experience-container .backend-dev {
-    border: 2px solid black;
-    border-radius: 25px;
   }
   .projects {
     padding: 1rem;
@@ -258,6 +237,12 @@ button {
   .projects .projects-main-title {
     text-align: center;
     padding: 1rem;
+  }
+  .projects .projects-main-title h4 {
+    font-size: 1.6rem;
+  }
+  .projects .projects-main-title h2 {
+    font-size: 1.3rem;
   }
   .projects h1 {
     color: rgba(3, 3, 3, 0.722);
@@ -276,9 +261,17 @@ button {
     border-radius: 25px;
   }
 }
-@media (width <= 768px) {
+@media (width >= 768px) {
+  .nav__container {
+    font-size: 2rem;
+  }
+  .nav__container ul {
+    gap: 2rem;
+  }
   .hero {
     display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
   .hero .hero__img {
     display: flex;
@@ -314,7 +307,7 @@ button {
     align-items: center;
   }
   .hero .hero__text .hero__btns button {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding: 1rem;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.755);
@@ -330,6 +323,7 @@ button {
     font-size: 2rem;
   }
   .about {
+    padding: 2rem;
     margin-top: 5rem;
   }
   .about .heading {
@@ -342,6 +336,7 @@ button {
     padding: 1rem;
     display: flex;
     justify-content: space-around;
+    gap: 2rem;
   }
   .about .about-container .education-xp-container .image img {
     border-radius: 25px;
@@ -349,6 +344,7 @@ button {
   .about .about-container .education-xp-container .items .item-wrapper {
     display: flex;
     justify-content: space-around;
+    gap: 2rem;
   }
   .about .about-container .education-xp-container .items .item-wrapper .education {
     border: 2px solid rgba(3, 3, 3, 0.722);
@@ -400,23 +396,6 @@ button {
     color: ghostwhite;
     border: 0;
   }
-  .xp .xp-title h4, .xp .xp-title h2 {
-    text-align: center;
-  }
-  .xp .experience-container {
-    text-align: center;
-  }
-  .xp .experience-container .frontend-dev, .xp .experience-container .backend-dev {
-    border: 2px solid black;
-    border-radius: 25px;
-  }
-  .xp .experience-container .frontend-dev .skill-container, .xp .experience-container .backend-dev .skill-container {
-    padding: 0.7rem;
-  }
-  .xp .experience-container .backend-dev {
-    border: 2px solid black;
-    border-radius: 25px;
-  }
   .projects {
     padding: 1rem;
   }
@@ -424,20 +403,14 @@ button {
     text-align: center;
     padding: 1rem;
   }
+  .projects .projects-main-title h4 {
+    font-size: 3rem;
+  }
+  .projects .projects-main-title h2 {
+    font-size: 2rem;
+  }
   .projects h1 {
     color: rgba(3, 3, 3, 0.722);
     text-align: center;
-  }
-  .contact {
-    padding: 1rem;
-  }
-  .contact .contact-container {
-    padding: 1rem;
-    text-align: center;
-  }
-  .contact .contact-container .image-container img {
-    width: 200px;
-    height: 350px;
-    border-radius: 25px;
   }
 }/*# sourceMappingURL=styles.css.map */
