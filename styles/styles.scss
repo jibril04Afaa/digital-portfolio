@@ -415,13 +415,68 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
     // Experience section (small and medium and large)
     .experience {
+        margin: 2rem 0 2rem 0;
+        .title {
+            text-align: center;
+            margin: 1rem 0 1rem 0;
+            h2 {
+                font-size: 1.7rem;
+                margin: 1rem 0 1rem 0;
+                
+            } 
+            h3 {
+
+            }
+        }
+        // experience (mobile) deep edits
+        .prog-languages, .frameworks {
+            //display: flex;
+            text-align: center;
+            margin: 2rem 0 2rem 0;
+            border: 2px solid black;
+            padding: 1rem 0 1rem 0;
+            border-radius: 25px;
+        }
+
+
+
+        // order of html elements in experience container
         .experience-container {
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .prog-languages{
+                //border: 2px solid red;
+                padding: 1rem;
+                .prog-languages-title {
+                    .list-of-prog-languages {
+
+                    }
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    h4 {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .frameworks{
+                padding: 1rem;
+                .frameworks-title {
+                    .list-of-frameworks {
+                        h2{
+                            font-size: 1.5rem;
+                        }
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
         }
     }
 
     // Projects section (small and medium and large)
-    // Projects section (tablets)
     .projects {
         padding: 1rem;
         .projects-main-title {
@@ -462,13 +517,11 @@ $specialColor: rgba(3, 3, 3, 0.722);
 }
 
 
-
-
 // Tablets 
  @media (width >= 768px) {
     .nav__container {
         font-size: $titleFont;
-    
+        display: flex;
         p {
 
         }
@@ -489,17 +542,16 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
     // Home Page (tablets)
     .hero {
-        //border: 2px solid red;
         display: flex;
-        justify-content: center;
-        gap: 2rem;
+        flex-direction: row;
+        justify-content: space-around;
         .hero__img {
             display: flex;
             justify-content: center;
 
             img {
-                width: 170px;
-                height: 250px;
+                width: 200px;
+                height: 350px;
                 border-radius: 25px;
             }
         }
@@ -511,16 +563,16 @@ $specialColor: rgba(3, 3, 3, 0.722);
             flex-direction: column;
             gap: 1rem;
             h3 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
     
             p {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 
             }
     
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 font-weight: bold;
             }
     
@@ -560,38 +612,40 @@ $specialColor: rgba(3, 3, 3, 0.722);
     .about {
         padding: 2rem;
         margin-top: 5rem;
-        .heading {
-            text-align: center;
-            //padding: 0.2rem;
-            h2 {
-                font-size: 3rem;
-            }
-        }
         .about-container {
             //border: 2px solid blue;
+            .heading {
+                text-align: center;
+                //padding: 0.2rem;
+                h2 {
+                    font-size: 3rem;
+                }
+            }
 
             .education-xp-container {
-                //border:2px solid blue;
                 padding: 1rem;
                 display: flex;
+                flex-direction: row;
                 justify-content: space-around;
                 gap: 2rem;
                 .image {
-                    // display: flex;
-                    // justify-content: center;
-                    // padding: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
                     
                     img {
+                        width: 300px;
+                        height: 400px;
                         border-radius: 25px;
                     }
                 }
 
                 .items {
-                    
+                    //border:2px solid blue;
                     .item-wrapper {
-                        display: flex;
-                        justify-content: space-around;
-                        gap: 2rem;
+                        //display: flex;
+                       // border: 2px solid green;
                         .education {
                             border:2px solid $specialColor;
                             font-size: 2rem;
@@ -657,6 +711,9 @@ $specialColor: rgba(3, 3, 3, 0.722);
                 }
             }
         }
+
+
+
     }
 
     //TODO: Fix this section to fit tablets
@@ -683,6 +740,70 @@ $specialColor: rgba(3, 3, 3, 0.722);
         }
     }
 
+    // Experience section (tablets)
+    .experience {
+        margin: 6.5rem 0 2rem 0;
+        //border: 2px solid red;
+        .title {
+            text-align: center;
+            margin: 1rem 0 1rem 0;
+            h2 {
+                font-size: 3rem;
+                margin: 1rem 0 1rem 0;
+                
+            } 
+            h3 {
+                font-size: 2rem;
+            }
+        }
+        // experience (mobile) deep edits
+        .prog-languages, .frameworks {
+            //display: flex;
+            text-align: center;
+            margin: 2rem 0 2rem 0;
+            border: 2px solid black;
+            padding: 1rem 0 1rem 0;
+            border-radius: 25px;
+        }
+
+
+
+        // order of html elements in experience container
+        .experience-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .prog-languages{
+                //border: 2px solid red;
+                padding: 1rem;
+                .prog-languages-title {
+                    .list-of-prog-languages {
+
+                    }
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    h4 {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .frameworks{
+                padding: 1rem;
+                .frameworks-title {
+                    .list-of-frameworks {
+                        h2{
+                            font-size: 1.5rem;
+                        }
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 
 }
@@ -691,8 +812,227 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
 
 // Laptops
-@media (width <= 1024px) {
+@media (width >= 1024px) {
+    .nav__container {
+        font-size: $titleFont;
+        display: flex;
+        
+        p {
+
+        }
+        // ul has a default flex display as specified in earlier code above
+        ul {
+            gap: 2rem;
+            
+            // li placed before a for easy readability
+            li {
+
+            }
+            a {
+
+            }
+
+        }
+    }
+
+    // Home Page (laptops)
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .hero__img {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 200px;
+                height: 350px;
+                border-radius: 25px;
+            }
+        }
+
+
+        .hero__text {
+            // border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            h3 {
+                font-size: 2.5rem;
+            }
+    
+            p {
+                font-size: 2.5rem;
+                
+            }
+    
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+    
+            p, h3 {
+                color: rgba(0, 0, 0, 0.607);
+                font-weight: bold;
+            }
+
+            .hero__btns {
+                // border: 2px solid green;
+                @include divCentered();
+                button {
+                    font-size: 1.8rem;
+                    padding: 1rem;
+                    border-radius: 25px;
+                    background-color: rgba(0, 0, 0, 0.755);
+                    color: ghostwhite;
+                    border: 0;
+                }
+
+            } 
+
+            .hero__links {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+    
+                i {
+                    font-size: 2.3rem; 
+                }
+            }
+
+        }
+    }
+
+    // About section (laptops)
+    .about {
+        padding: 2rem;
+        margin-top: 5rem;
+        .heading {
+            text-align: center;
+            //padding: 0.2rem;
+            h2 {
+                font-size: 4rem;
+            }
+        }
+        .about-container {
+            //border: 2px solid blue;
+
+            .education-xp-container {
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 2rem;
+                .image {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    img {
+                        width: 300px;
+                        height: 400px;
+                        border-radius: 25px;
+                    }
+                }
+
+                .items {
+                    //border:2px solid blue;
+                    .item-wrapper {
+                        display: flex;
+                        //flex-direction: column;
+                        justify-content: center;
+                        .education {
+                            border:2px solid $specialColor;
+                            font-size: 2.5rem;
+                            padding: 1.2rem;
+                            border-radius: 25px;
+                            display: flex;
+                            flex-flow: wrap;
+                            flex-direction: column;
+                            h4 {
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            span {
+                                text-align: center;
+                            }
+
+                            h5 {
+
+                            }
+                        }
+                        .experience {
+                            border: 2px solid $specialColor;
+                            padding: 1.2rem;
+                            font-size: 2rem;
+                            border-radius: 25px;
+                            display: flex;
+                            flex-flow: wrap;
+                            flex-direction: column;
+                            h4 {
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            span {
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            h5 {
+                                
+                            }
+                        }
+                    }
+                    .text {
+                        text-align: center;
+                        padding-top: 1rem;
+                        font-size: 2rem;
+                    }
+
+                    .writing-btn {
+                        text-align: center;
+                        padding: 1rem;
+                        button {
+                            font-size: 2rem;
+                            padding: 1rem;
+                            border-radius: 25px;
+                            background-color: rgba(0, 0, 0, 0.755);
+                            color: ghostwhite;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Projects section (laptops)
+    .projects {
+        padding: 1rem;
+        .projects-main-title {
+            text-align: center;
+            padding: 1rem;
+            h4 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        h1 {
+            color: $specialColor;
+            text-align: center;
+        }
+    }
+
+
 
 }
+
 
 // Large laptops (1440px)

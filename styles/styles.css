@@ -231,6 +231,47 @@ button {
     color: ghostwhite;
     border: 0;
   }
+  .experience {
+    margin: 2rem 0 2rem 0;
+  }
+  .experience .title {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+  }
+  .experience .title h2 {
+    font-size: 1.7rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .experience .prog-languages, .experience .frameworks {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    border: 2px solid black;
+    padding: 1rem 0 1rem 0;
+    border-radius: 25px;
+  }
+  .experience .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience .experience-container .prog-languages {
+    padding: 1rem;
+  }
+  .experience .experience-container .prog-languages .prog-languages-title h2 {
+    font-size: 1.5rem;
+  }
+  .experience .experience-container .prog-languages .prog-languages-title h4 {
+    font-size: 1.2rem;
+  }
+  .experience .experience-container .frameworks {
+    padding: 1rem;
+  }
+  .experience .experience-container .frameworks .frameworks-title .list-of-frameworks h2 {
+    font-size: 1.5rem;
+  }
+  .experience .experience-container .frameworks .frameworks-title .list-of-frameworks h4 {
+    font-size: 1.3rem;
+  }
   .projects {
     padding: 1rem;
   }
@@ -264,22 +305,23 @@ button {
 @media (width >= 768px) {
   .nav__container {
     font-size: 2rem;
+    display: flex;
   }
   .nav__container ul {
     gap: 2rem;
   }
   .hero {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .hero .hero__img {
     display: flex;
     justify-content: center;
   }
   .hero .hero__img img {
-    width: 170px;
-    height: 250px;
+    width: 200px;
+    height: 350px;
     border-radius: 25px;
   }
   .hero .hero__text {
@@ -288,13 +330,13 @@ button {
     gap: 1rem;
   }
   .hero .hero__text h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .hero .hero__text p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .hero .hero__text h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
   .hero .hero__text p, .hero .hero__text h3 {
@@ -326,29 +368,239 @@ button {
     padding: 2rem;
     margin-top: 5rem;
   }
-  .about .heading {
+  .about .about-container .heading {
     text-align: center;
   }
-  .about .heading h2 {
+  .about .about-container .heading h2 {
     font-size: 3rem;
   }
   .about .about-container .education-xp-container {
     padding: 1rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
+  }
+  .about .about-container .education-xp-container .image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   .about .about-container .education-xp-container .image img {
+    width: 300px;
+    height: 400px;
     border-radius: 25px;
-  }
-  .about .about-container .education-xp-container .items .item-wrapper {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
   }
   .about .about-container .education-xp-container .items .item-wrapper .education {
     border: 2px solid rgba(3, 3, 3, 0.722);
     font-size: 2rem;
+    padding: 1.2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .education h4 {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .education span {
+    text-align: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .experience {
+    border: 2px solid rgba(3, 3, 3, 0.722);
+    padding: 1.2rem;
+    font-size: 2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .experience h4 {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .experience span {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .text {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
+  .about .about-container .education-xp-container .items .writing-btn {
+    text-align: center;
+    padding: 1rem;
+  }
+  .about .about-container .education-xp-container .items .writing-btn button {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+  }
+  .projects {
+    padding: 1rem;
+  }
+  .projects .projects-main-title {
+    text-align: center;
+    padding: 1rem;
+  }
+  .projects .projects-main-title h4 {
+    font-size: 3rem;
+  }
+  .projects .projects-main-title h2 {
+    font-size: 2rem;
+  }
+  .projects h1 {
+    color: rgba(3, 3, 3, 0.722);
+    text-align: center;
+  }
+  .experience {
+    margin: 6.5rem 0 2rem 0;
+  }
+  .experience .title {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+  }
+  .experience .title h2 {
+    font-size: 3rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .experience .title h3 {
+    font-size: 2rem;
+  }
+  .experience .prog-languages, .experience .frameworks {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    border: 2px solid black;
+    padding: 1rem 0 1rem 0;
+    border-radius: 25px;
+  }
+  .experience .experience-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .experience .experience-container .prog-languages {
+    padding: 1rem;
+  }
+  .experience .experience-container .prog-languages .prog-languages-title h2 {
+    font-size: 1.5rem;
+  }
+  .experience .experience-container .prog-languages .prog-languages-title h4 {
+    font-size: 1.2rem;
+  }
+  .experience .experience-container .frameworks {
+    padding: 1rem;
+  }
+  .experience .experience-container .frameworks .frameworks-title .list-of-frameworks h2 {
+    font-size: 1.5rem;
+  }
+  .experience .experience-container .frameworks .frameworks-title .list-of-frameworks h4 {
+    font-size: 1.3rem;
+  }
+}
+@media (width >= 1024px) {
+  .nav__container {
+    font-size: 2rem;
+    display: flex;
+  }
+  .nav__container ul {
+    gap: 2rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hero .hero__img {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero__img img {
+    width: 200px;
+    height: 350px;
+    border-radius: 25px;
+  }
+  .hero .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero .hero__text h3 {
+    font-size: 2.5rem;
+  }
+  .hero .hero__text p {
+    font-size: 2.5rem;
+  }
+  .hero .hero__text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .hero .hero__text p, .hero .hero__text h3 {
+    color: rgba(0, 0, 0, 0.607);
+    font-weight: bold;
+  }
+  .hero .hero__text .hero__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .hero__text .hero__btns button {
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+  }
+  .hero .hero__text .hero__links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .hero .hero__text .hero__links i {
+    font-size: 2.3rem;
+  }
+  .about {
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+  .about .heading {
+    text-align: center;
+  }
+  .about .heading h2 {
+    font-size: 4rem;
+  }
+  .about .about-container .education-xp-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  .about .about-container .education-xp-container .image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .image img {
+    width: 300px;
+    height: 400px;
+    border-radius: 25px;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-container .education-xp-container .items .item-wrapper .education {
+    border: 2px solid rgba(3, 3, 3, 0.722);
+    font-size: 2.5rem;
     padding: 1.2rem;
     border-radius: 25px;
     display: flex;
