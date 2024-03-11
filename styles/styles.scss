@@ -19,6 +19,15 @@ html {
     //overflow-x: hidden;
 }
 
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 button {
     cursor: pointer;
 }
@@ -136,7 +145,7 @@ $specialColor: rgba(3, 3, 3, 0.722);
     }
 }
 
-
+// About me default
 .about {
     .about-container {
         .heading {
@@ -159,6 +168,10 @@ $specialColor: rgba(3, 3, 3, 0.722);
                     //flex-direction: column;
                     //gap: 1rem;
                     .education {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        gap: 1rem;
                         //border:2px solid $specialColor;
                         //padding: 1.2rem;
                         //border-radius: 25px;
@@ -186,6 +199,10 @@ $specialColor: rgba(3, 3, 3, 0.722);
                         // display: flex;
                         // flex-flow: wrap;
                         // flex-direction: column;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        gap: 1rem;
                         h4 {
                             // display: flex;
                             // justify-content: center;
@@ -222,8 +239,50 @@ $specialColor: rgba(3, 3, 3, 0.722);
 
 
 
+// experience default
+.experience {
+    .title {
+        h2 {
+        } 
+        h3 {
+        }
+    }
+    .prog-languages, .frameworks {
 
+    }
+    .experience-container {
+        .prog-languages{
 
+            .prog-languages-title {
+                .list-of-prog-languages {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    gap: 1em;
+                }
+                h2{
+                }
+                h4 {
+                }
+            }
+        }
+        .frameworks{
+            padding: 1rem;
+            .frameworks-title {
+                .list-of-frameworks {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    gap: 1em;
+                    h2{
+                    }
+                    h4 {
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -239,7 +298,85 @@ $specialColor: rgba(3, 3, 3, 0.722);
         display: none;
     }
 
-    // Home Page (small and medium)
+    // burger menu
+
+    
+    
+    
+    /* off-screen-menu */
+    .off-screen-menu {
+        background-color: rgb(7, 71, 25);
+        color: black;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+    .off-screen-menu.active {
+        right: 0;
+    }
+    
+    
+    
+    /* nav */
+    nav {
+        padding: 1rem;
+        display: flex;
+        
+    }
+    
+    
+    
+    /* burger menu */
+    // .burger-menu {
+    //     height: 50px;
+    //     width: 40px;
+    //     margin-left: auto;
+    //     position: relative;
+    // }
+    // .burger-menu span {
+    //     height: 5px;
+    //     width: 100%;
+    //     background-color: white;
+    //     border-radius: 25px;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    //     transition: .3s ease;
+    // }
+    // .burger-menu span:nth-child(1) {
+    //     top: 25%;
+    // }
+    // .burger-menu span:nth-child(3) {
+    //     top: 75%;
+    // }
+    // .burger-menu.active span {
+    //     background-color: white;
+    // }
+    // .burger-menu.active span:nth-child(1) {
+    //     top: 50%;
+    //     transform: translate(-50%, -50%) rotate(45deg);
+    // }
+    // .burger-menu.active span:nth-child(2) {
+    //     opacity: 0;
+    // }
+    // .burger-menu.active span:nth-child(3) {
+    //     top: 50%;
+    //     transform: translate(-50%, -50%) rotate(-45deg);
+    // }
+
+
+    // Home Page (small and medium and large)
     .hero {
         //border: 2px solid red;
         display: flex;
@@ -1002,6 +1139,70 @@ $specialColor: rgba(3, 3, 3, 0.722);
                             background-color: rgba(0, 0, 0, 0.755);
                             color: ghostwhite;
                             border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Experience section (laptops)
+    .experience {
+        margin: 6.5rem 0 2rem 0;
+        //border: 2px solid red;
+        .title {
+            text-align: center;
+            margin: 1rem 0 1rem 0;
+            h2 {
+                font-size: 3rem;
+                margin: 1rem 0 1rem 0;
+                
+            } 
+            h3 {
+                font-size: 2rem;
+            }
+        }
+        // experience (laptop) deep edits
+        .prog-languages, .frameworks {
+            //display: flex;
+            text-align: center;
+            margin: 2rem 0 2rem 0;
+            border: 2px solid black;
+            padding: 1rem 0 1rem 0;
+            border-radius: 25px;
+        }
+
+
+
+        // order of html elements in experience container
+        .experience-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .prog-languages{
+                //border: 2px solid red;
+                padding: 1rem;
+                .prog-languages-title {
+                    .list-of-prog-languages {
+
+                    }
+                    h2{
+                        font-size: 2.5rem;
+                    }
+                    h4 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .frameworks{
+                padding: 1rem;
+                .frameworks-title {
+                    .list-of-frameworks {
+                        h2{
+                            font-size: 2.5rem;
+                        }
+                        h4 {
+                            font-size: 2rem;
                         }
                     }
                 }

@@ -15,6 +15,14 @@ html {
   scroll-behavior: smooth;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -86,6 +94,18 @@ button {
 .about .about-container .education-xp-container .image img {
   border-radius: 25px;
 }
+.about .about-container .education-xp-container .items .item-wrapper .education {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.about .about-container .education-xp-container .items .item-wrapper .experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
 .about .about-container .education-xp-container .items .text {
   text-align: center;
 }
@@ -96,10 +116,52 @@ button {
   opacity: 0.7;
 }
 
+.experience .experience-container .prog-languages .prog-languages-title .list-of-prog-languages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
+}
+.experience .experience-container .frameworks {
+  padding: 1rem;
+}
+.experience .experience-container .frameworks .frameworks-title .list-of-frameworks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
+}
 @media (width >= 320px) {
   .nav__container {
     display: none;
   }
+  /* off-screen-menu */
+  .off-screen-menu {
+    background-color: rgb(7, 71, 25);
+    color: black;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.3s ease;
+  }
+  .off-screen-menu.active {
+    right: 0;
+  }
+  /* nav */
+  nav {
+    padding: 1rem;
+    display: flex;
+  }
+  /* burger menu */
   .hero {
     display: flex;
     flex-direction: column;
@@ -647,6 +709,50 @@ button {
     background-color: rgba(0, 0, 0, 0.755);
     color: ghostwhite;
     border: 0;
+  }
+  .experience {
+    margin: 6.5rem 0 2rem 0;
+  }
+  .experience .title {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+  }
+  .experience .title h2 {
+    font-size: 3rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .experience .title h3 {
+    font-size: 2rem;
+  }
+  .experience .prog-languages, .experience .frameworks {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    border: 2px solid black;
+    padding: 1rem 0 1rem 0;
+    border-radius: 25px;
+  }
+  .experience .experience-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .experience .experience-container .prog-languages {
+    padding: 1rem;
+  }
+  .experience .experience-container .prog-languages .prog-languages-title h2 {
+    font-size: 2.5rem;
+  }
+  .experience .experience-container .prog-languages .prog-languages-title h4 {
+    font-size: 2rem;
+  }
+  .experience .experience-container .frameworks {
+    padding: 1rem;
+  }
+  .experience .experience-container .frameworks .frameworks-title .list-of-frameworks h2 {
+    font-size: 2.5rem;
+  }
+  .experience .experience-container .frameworks .frameworks-title .list-of-frameworks h4 {
+    font-size: 2rem;
   }
   .projects {
     padding: 1rem;
