@@ -55,6 +55,9 @@ $specialColor: rgba(3, 3, 3, 0.722);
     align-items: center;
 }
 
+// loading screen
+
+
 // default values
 
 // Navbar
@@ -170,6 +173,7 @@ $specialColor: rgba(3, 3, 3, 0.722);
                     .education {
                         display: flex;
                         flex-direction: column;
+                        flex-flow: wrap;
                         justify-content: space-around;
                         gap: 1rem;
                         //border:2px solid $specialColor;
@@ -209,8 +213,6 @@ $specialColor: rgba(3, 3, 3, 0.722);
                         }
 
                         span {
-                            // display: flex;
-                            // justify-content: center;
                         }
 
                         h5 {

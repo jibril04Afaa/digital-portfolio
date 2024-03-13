@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@400;500&family=Poppins:wght@100&family=Quattrocento+Sans&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-family: 'Quattrocento Sans', sans-serif;
+    text-decoration: none;
+    color: rgb(0,0,0);
+   
+}
+
+html {
+    scroll-behavior: smooth;
+    //overflow-x: hidden;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+// variables
+$titleFont: 2rem;
+$specialColor: rgba(3, 3, 3, 0.722);
+
+//mixins
+@mixin btnSettings {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.755);
+    color: ghostwhite;
+    border: 0;
+    &:hover {
+        opacity: .7;
+    }
+}
+
+@mixin divCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// default values for all screen sizes
+
+
+.contact-header {
+    text-align: center;
+    h1 {}
+    h3 {
+        
+    }
+}
+
+.section-title {
+    font-weight: bold;
+    font-family: serif;
+}
+
+.contact-container {
+    //border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    .contact-details {
+        // height: 30rem;
+        // width: 15rem;
+        //border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // address
+        .address-container {
+            display: flex;
+            justify-content: space-around;
+            .address-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .address {
+                .section-title {
+
+                }
+
+                p {
+
+                }
+            }
+        }
+
+        // phone
+        .phone-container {
+            //border: 2px solid saddlebrown;
+
+            display: flex;
+            justify-content: space-around;
+            .phone-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .phone {
+                .section-title {
+
+                }
+
+                p {
+
+                }
+            }
+        }
+
+        // email
+        .email-container {
+            display: flex;
+            justify-content: space-around;
+            .email-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .email {
+                
+                .section-title {
+
+                }
+
+                p {
+
+                }
+            }
+
+
+        }
+    }
+
+    // send message
+    .send-message {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        //border: 2px solid blue;
+        // width: 30rem;
+        // height: 20rem;
+        h2 {
+            text-align: center;
+        }
+
+        .send-message-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .input-container {
+                //height: 10rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                input {
+                    font-size: 2rem;
+                }
+            }
+
+            .send-message-btn {
+                button {
+                    @include btnSettings();
+                }
+            }
+           
+
+        }
+    }
+}
+
+// mobile screens
+
+@media (width >= 320px) {
+    // make fonts smaller and layouts vertical
+    p {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    h2 {}
+
+    .contact-header {
+        margin: 1rem 1rem 1rem 1rem;
+        h1{}
+        h3 {}
+    }
+
+
+    .contact-container {
+        //border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .contact-details {
+            // height: 30rem;
+            // width: 15rem;
+            //border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            // address
+            .address-container {
+                display: flex;
+                justify-content: space-between;
+                .address-icon {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .address {
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+            }
+    
+            // phone
+            .phone-container {
+                //border: 2px solid saddlebrown;
+    
+                display: flex;
+                justify-content: space-around;
+                .phone-icon {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .phone {
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+            }
+    
+            // email
+            .email-container {
+                display: flex;
+                justify-content: space-around;
+                .email-icon {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .email {
+                    
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+    
+    
+            }
+        }
+    
+        // send message
+        .send-message {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            //border: 2px solid blue;
+            // width: 30rem;
+            // height: 20rem;
+            h2 {
+                padding: 0.5rem;
+                font-size: 1rem;
+                text-align: center;
+            }
+    
+            .send-message-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .input-container {
+                    //height: 10rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    
+                    input {
+                        padding: 2rem;
+                        font-size: 1.2rem;
+                        
+                    }
+                }
+    
+                .send-message-btn {
+                    padding: 0.5rem;
+                    button {
+                        @include btnSettings();
+                        font-size: 0.8rem;
+                        border-radius: 5px;
+                        padding: 0.5rem;
+                        // @mixin btnSettings {
+                        //     font-size: 1.5rem;
+                        //     padding: 1rem;
+                        //     border-radius: 25px;
+                        //     background-color: rgba(0, 0, 0, 0.755);
+                        //     color: ghostwhite;
+                        //     border: 0;
+                        //     &:hover {
+                        //         opacity: .7;
+                        //     }
+                        // }
+                    }
+                }
+               
+    
+            }
+        }
+    }
+
+    .back-to-home {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0 0 0;
+        a {
+            button {
+                @include btnSettings();
+                padding: 0.5rem;
+                border-radius: 5px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+}
+
+// tablet screens
+@media (width >= 768px) {
+    // make fonts bigger and layouts horizontal
+    p {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h2 {}
+
+    .contact-header {
+        margin: 1.2rem 1.2rem 1.2rem 1.2rem;
+        h1{}
+        h3 {}
+    }
+
+
+    .contact-container {
+        //border: 2px solid red;
+        height: 20rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .contact-details {
+            // height: 30rem;
+            // width: 15rem;
+            //border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            // address
+            .address-container {
+                display: flex;
+                justify-content: space-between;
+                .address-icon {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .address {
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+            }
+    
+            // phone
+            .phone-container {
+                //border: 2px solid saddlebrown;
+    
+                display: flex;
+                justify-content: space-around;
+                .phone-icon {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .phone {
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+            }
+    
+            // email
+            .email-container {
+                display: flex;
+                justify-content: space-around;
+                .email-icon {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .email {
+                    
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+    
+    
+            }
+        }
+    
+        // send message
+        .send-message {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            //border: 2px solid blue;
+            // width: 30rem;
+            // height: 20rem;
+            h2 {
+                padding: 0.5rem;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+    
+            .send-message-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .input-container {
+                    //height: 10rem;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    input {
+                        padding: 2rem;
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                .send-message-btn {
+                    padding: 0.5rem;
+                    button {
+                        @include btnSettings();
+                        font-size: 1.2rem;
+                        border-radius: 5px;
+                        padding: 0.5rem;
+                        // @mixin btnSettings {
+                        //     font-size: 1.5rem;
+                        //     padding: 1rem;
+                        //     border-radius: 25px;
+                        //     background-color: rgba(0, 0, 0, 0.755);
+                        //     color: ghostwhite;
+                        //     border: 0;
+                        //     &:hover {
+                        //         opacity: .7;
+                        //     }
+                        // }
+                    }
+                }
+               
+    
+            }
+        }
+    }
+
+    .back-to-home {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 0 0 0;
+        a {
+            button {
+                @include btnSettings();
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+// laptop screens
+@media (width >= 1024px) {
+    // fonts are the biggest and layouts are horizontal
+    p, h1, h3 {
+        font-size: 2.5rem;
+    }
+
+    .contact-header {
+        margin: 2rem 2rem 2rem 2rem;
+        h1{}
+        h3 {}
+    }
+
+
+    .contact-container {
+        //border: 2px solid red;
+        height: 20rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .contact-details {
+            //border: 2px solid red;
+            height: 30rem;
+            // width: 15rem;
+            //border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            // address
+            .address-container {
+                display: flex;
+                justify-content: space-between;
+                .address-icon {
+                    font-size: 2rem;
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .address {
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+            }
+    
+            // phone
+            .phone-container {
+                //border: 2px solid saddlebrown;
+    
+                display: flex;
+                justify-content: space-around;
+                .phone-icon {
+                    font-size: 2rem;
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .phone {
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+            }
+    
+            // email
+            .email-container {
+                display: flex;
+                justify-content: space-around;
+                .email-icon {
+                    font-size: 2rem;
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .email {
+                    
+                    .section-title {
+    
+                    }
+    
+                    p {
+    
+                    }
+                }
+    
+    
+            }
+        }
+    
+        // send message
+        .send-message {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            //border: 2px solid blue;
+            // width: 30rem;
+            // height: 20rem;
+            h2 {
+                padding: 0.5rem;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+    
+            .send-message-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .input-container {
+                    //height: 10rem;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    input {
+                        padding: 2rem;
+                        font-size: 2.5rem;
+                    }
+                }
+    
+                .send-message-btn {
+                    padding: 0.5rem;
+                    button {
+                        @include btnSettings();
+                        font-size: 1.5rem;
+                        border-radius: 5px;
+                        padding: 0.5rem;
+                        // @mixin btnSettings {
+                        //     font-size: 1.5rem;
+                        //     padding: 1rem;
+                        //     border-radius: 25px;
+                        //     background-color: rgba(0, 0, 0, 0.755);
+                        //     color: ghostwhite;
+                        //     border: 0;
+                        //     &:hover {
+                        //         opacity: .7;
+                        //     }
+                        // }
+                    }
+                }
+               
+    
+            }
+        }
+    }
+
+    .back-to-home {
+        display: flex;
+        justify-content: center;
+        margin: 8rem 0 0 0;
+        a {
+            button {
+                @include btnSettings();
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -97,6 +97,7 @@ button {
 .about .about-container .education-xp-container .items .item-wrapper .education {
   display: flex;
   flex-direction: column;
+  flex-flow: wrap;
   justify-content: space-around;
   gap: 1rem;
 }
